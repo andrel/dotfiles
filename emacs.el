@@ -117,7 +117,7 @@
 
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
-(add-to-list 'load-path "~/.emacs-config/customizations")
+(add-to-list 'load-path "~/dotfiles/emacs-config/customizations")
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
