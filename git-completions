@@ -1,0 +1,10 @@
+# Command completion for aliased git commands.
+source /usr/share/bash-completion/completions/git
+
+complete -o bashdefault -o default -o nospace -F __git_wrap__git_main g
+__git_complete ga _git_add
+__git_complete gb _git_branch
+__git_complete gc _git_commit
+__git_complete gd _git_diff
+__git_complete gh _git_log
+__git_complete gp _git_pull
