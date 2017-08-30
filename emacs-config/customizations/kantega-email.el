@@ -25,7 +25,7 @@
 ;; I don't use a signature...
 (setq
  user-mail-address "andre@lindhjem.net"
- user-full-name  "André Lindhjem"
+ user-full-name "André Lindhjem"
  ;; message-signature
  ;;  (concat
  ;;    "Foo X. Bar\n"
@@ -54,7 +54,7 @@
     ;;  )
     ("runbox"
      (user-email-address "andre@lindhjem.net")
-     (user-full-name "André Lindhjem")
+     (user-full-name     "André Lindhjem")
      (mu4e-refile-folder "/runbox/Archive")
      (mu4e-sent-folder   "/runbox/Sent")
      (mu4e-trash-folder  "/runbox/Trash"))
@@ -63,7 +63,6 @@
 (setq mu4e-user-mail-address-list
       (mapcar (lambda (account) (cadr (assq 'user-mail-address account)))
               my-mu4e-account-alist))
-
 (defun my-mu4e-set-account ()
   "Set the account for composing a message."
   (let* ((account
@@ -75,13 +74,32 @@
                                      (mapconcat #'(lambda (var) (car var))
                                                 my-mu4e-account-alist "/"))
                              (mapcar #'(lambda (var) (car var)) my-mu4e-account-alist)
-                             nil t nil nil (car my-mu4e-account-alist))))
+                             nil t nil nil (caar my-mu4e-account-alist))))
          (account-vars (cdr (assoc account my-mu4e-account-alist))))
     (if account-vars
         (mapc #'(lambda (var)
                   (set (car var) (cadr var)))
               account-vars)
       (error "No email account found"))))
+
+;; (defun my-mu4e-set-account ()
+;;   "Set the account for composing a message."
+;;   (let* ((account
+;;           (if mu4e-compose-parent-message
+;;               (let ((maildir (mu4e-message-field mu4e-compose-parent-message :maildir)))
+;;                 (string-match "/\\(.*?\\)/" maildir)
+;;                 (match-string 1 maildir))
+;;             (completing-read (format "Compose with account: (%s) "
+;;                                      (mapconcat #'(lambda (var) (car var))
+;;                                                 my-mu4e-account-alist "/"))
+;;                              (mapcar #'(lambda (var) (car var)) my-mu4e-account-alist)
+;;                              nil t nil nil (caar my-mu4e-account-alist))))
+;;          (account-vars (cdr (assoc account my-mu4e-account-alist))))
+;;     (if account-vars
+;;         (mapc #'(lambda (var)
+;;                   (set (car var) (cadr var)))
+;;               account-vars)
+;;       (error "No email account found"))))
 
 ;; ask for account when composing mail
 (add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
