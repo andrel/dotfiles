@@ -12,6 +12,10 @@ alias gh='git hist '
 
 function ghh { git hist -- "$1" | head; }
 
+
+# Misc
+alias l='ls -ltrah '
+
 # Project aliases
 alias b-g="cd ~/workspaces/bit-gobo"
 alias b-r="cd ~/workspaces/bit-root"
