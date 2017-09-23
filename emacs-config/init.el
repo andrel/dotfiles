@@ -79,6 +79,8 @@
     ;; mu4e maildirs summary
     mu4e-maildirs-extension
 
+    ;; undo-tree-mode
+    undo-tree
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user

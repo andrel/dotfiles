@@ -138,3 +138,7 @@ Version 2017-07-08"
 (global-set-key (kbd "C-w") 'xah-cut-line-or-region) ; cut
 (global-set-key (kbd "M-w") 'xah-copy-line-or-region) ; copy
 (global-set-key (kbd "C-y") 'yank) ; paste
+
+;; undo-tree-mode
+(require 'undo-tree)
+(global-undo-tree-mode)
