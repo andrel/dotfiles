@@ -171,7 +171,9 @@
     ("~/Documents/hjemmefront.org" "~/Documents/kantega/TODO.org")))
  '(safe-local-variable-values
    (quote
-    ((toggle-truncate-lines . 0)
+    ((visual-line-mode . 1)
+     (rainbow-delimiters-mode . 0)
+     (toggle-truncate-lines . 0)
      (toggle-word-wrap . 1)
      (visual-line-mode . 0))))
  '(send-mail-function nil)
