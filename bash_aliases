@@ -25,6 +25,7 @@ alias b-b="cd ~/workspaces/bit-bostotte"
 
 # Maven alias
 alias m='mvn '
+alias mci='mvn $* clean install'
 
 # i tracking
 alias ie='i --edit $* '
