@@ -7,6 +7,7 @@ alias gc='git commit'
 alias gd='git diff'
 # Conflicts with golang
 #alias go='git checkout '
+alias gco='git checkout '
 alias gp='git pull '
 alias gh='git hist '
 
