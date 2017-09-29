@@ -10,7 +10,7 @@ alias gd='git diff'
 alias gp='git pull '
 alias gh='git hist '
 
-function ghh { git hist -- "$1" | head; }
+function ghh { git hist $* | head; }
 
 
 # Misc
