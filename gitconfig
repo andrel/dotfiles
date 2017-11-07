@@ -10,6 +10,9 @@
 	editor = kilo
 
 [alias]
+	# Get the current branch name (not so useful in itself, but used in
+	# other aliases)
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
 	ci = commit
 	co = checkout
 	st = status
@@ -17,7 +20,13 @@
 	peek = log HEAD..origin
 	rmpeek = fetch peek
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-        mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+	mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+	# Push the current branch to the remote "origin", and set it to track
+	# the upstream branch
+	publish = "!git push -u origin $(git branch-name)"
+	# Delete the remote version of the current branch
+	unpublish = "!git push origin :$(git branch-name)"
+
 [merge]
 	tool = meld
 [rerere]
