@@ -142,3 +142,7 @@ Version 2017-07-08"
 ;; undo-tree-mode
 (require 'undo-tree)
 (global-undo-tree-mode)
+
+;; Multiple cursors
+;; http://pragmaticemacs.com/emacs/multiple-cursors/
+(global-set-key (kbd "C-c m c") 'mc/edit-lines)
