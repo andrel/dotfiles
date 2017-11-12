@@ -24,9 +24,17 @@ alias h-a="cd ~/workspaces/hel-arkiv"
 alias h-f="cd ~/workspaces/hel-fellestjenester"
 alias b-b="cd ~/workspaces/bit-bostotte"
 
-# Maven alias
-alias m='mvn '
-alias mci='mvn $* clean install'
+# Maven aliases
+# Execute mvnw wrapper if present. Else, run mvn command.
+alias mci='m $* clean install'
+function m {
+  #cd "$(dirname "$0")"
+  if [ -x "mvnw" ] ; then
+    ./mvnw $*
+  else
+    mvn $*
+  fi
+}
 
 # i tracking
 alias ie='i --edit $* '
