@@ -51,6 +51,6 @@ fi
 
 # Gobo BIT_ENV
 if [ -d "/home/andlin/workspaces/bit-gobo" ] ; then
-    export BIT_ENB=DEV
+    export BIT_ENV=DEV
 fi
 #echo "Loaded ~/.profile"
