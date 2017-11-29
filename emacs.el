@@ -166,9 +166,10 @@
    (quote
     ("9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" default)))
  '(menu-bar-mode nil)
+ '(org-agenda-file-regexp "\\`[^.].*\\.org\\'\\|\\`[0-9]+\\'")
  '(org-agenda-files
    (quote
-    ("~/Documents/hjemmefront.org" "~/Documents/kantega/TODO.org")))
+    ("~/Documents/hjemmefront.org" "~/Documents/kantega/TODO.org" "~/Documents/journal")))
  '(safe-local-variable-values
    (quote
     ((visual-line-mode . 1)
