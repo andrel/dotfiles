@@ -15,7 +15,7 @@
       '(("/kantega/INBOX"            . ?i)
         ("/runbox/Trash"             . ?t)
         ("/kantega/Trash"            . ?y)
-        ("/kantega/Archives.2017"    . ?s)
+        ("/kantega/Archives.2018"    . ?s)
         ("/runbox/Archive"           . ?a)))
 
 ;; allow for updating mail using 'U' in the main view:
@@ -40,7 +40,7 @@
      (mu4e-sent-folder   "/kantega/Sendte Elementer")
      (mu4e-drafts-folder "/kantega/Drafts")
      (mu4e-trash-folder  "/kantega/Trash")
-     (mu4e-refile-folder "/kantega/Archives.2017"))
+     (mu4e-refile-folder "/kantega/Archives.2018"))
     ;; ("gmail"
     ;;  (user-mail-address  "belgarat1@gmail.com")
     ;;  (user-full-name     "André Lindhjem")
