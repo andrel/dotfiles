@@ -139,13 +139,13 @@ export GPG_TTY
 rand() {
     local l=$1
     [ "$l" == "" ] && l=16
-    tr -dc A-Za-z0-9_ < /dev/random | head -c ${l} | xargs
+    tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
 }
 
 randn() {
     local l=$1
     [ "$l" == "" ] && l=16
-    tr -dc 0-9 < /dev/random | head -c ${l} | xargs
+    tr -dc 0-9 < /dev/urandom | head -c ${l} | xargs
 }
 
 #echo "Loaded ~/.bashrc"
