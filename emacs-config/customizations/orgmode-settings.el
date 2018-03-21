@@ -2,6 +2,7 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-cs" 'org-schedule)
 
 (setq org-refile-targets '(
    (nil :maxlevel . 2)              ; refile to headings in the current buffer
