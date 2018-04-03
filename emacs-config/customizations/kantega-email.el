@@ -41,17 +41,6 @@
      (mu4e-drafts-folder "/kantega/Drafts")
      (mu4e-trash-folder  "/kantega/Trash")
      (mu4e-refile-folder "/kantega/Archives.2018"))
-    ;; ("gmail"
-    ;;  (user-mail-address  "belgarat1@gmail.com")
-    ;;  (user-full-name     "André Lindhjem")
-    ;;  (mu4e-sent-folder   "/gmail/[Google Mail].Sent Mail")
-    ;;  (mu4e-drafts-folder "/gmail/[Google Mail].Drafts")
-    ;;  ;; (mu4e-trash-folder  "/gmail/[Google Mail].Bin")
-    ;;  )
-    ;; ("lindhjem"
-    ;;  (user-mail-address "andre@lindhjem.net")
-    ;;  (user-full-name "André Lindhjem")
-    ;;  )
     ("runbox"
      (user-email-address "andre@lindhjem.net")
      (user-full-name     "André Lindhjem")
